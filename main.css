@@ -212,14 +212,18 @@ html {
   display: flex;
   gap: 30px;
 }
-#hero-section .bottom .statistics h4 {
+#hero-section .bottom .statistics div {
+  width: 150px;
+  height: 77px;
+}
+#hero-section .bottom .statistics div h4 {
   font-size: 28px;
   font-weight: 700;
   line-height: 39.2px;
   color: #FFFFFF;
   font-family: "Space Mono", monospace;
 }
-#hero-section .bottom .statistics p {
+#hero-section .bottom .statistics div p {
   font-size: 23.99px;
   font-weight: 400;
   line-height: 38.384px;
@@ -254,13 +258,17 @@ html {
   #hero-section .bottom button {
     margin: 20px 0;
   }
-  #hero-section .bottom .statistics h4 {
+  #hero-section .bottom .statistics div {
+    width: 90px;
+    height: 57px;
+  }
+  #hero-section .bottom .statistics div h4 {
     font-size: 22px;
     font-weight: 700;
     line-height: 35.2px;
     color: #FFFFFF;
   }
-  #hero-section .bottom .statistics p {
+  #hero-section .bottom .statistics div p {
     font-size: 16px;
     font-weight: 400;
     line-height: 22.4px;
@@ -306,8 +314,92 @@ html {
     cursor: pointer;
     margin: 40px 0;
   }
-  #hero-section .bottom .statistics {
-    justify-content: space-between;
+  #hero-section .bottom .statistics div {
+    width: 85px;
+  }
+}
+
+#trending-collection-section {
+  padding: 80px 0;
+}
+#trending-collection-section h3 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 45.6px;
+  color: #FFFFFF;
+}
+#trending-collection-section > p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 35.2px;
+  color: #FFFFFF;
+  margin: 10px 0 60px;
+}
+#trending-collection-section .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+#trending-collection-section .bottom .cards .group img {
+  width: 330px;
+  border-radius: 20px;
+}
+#trending-collection-section .bottom .cards .group .row {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+#trending-collection-section .bottom .cards .group .row img {
+  width: 100px;
+}
+#trending-collection-section .bottom .cards .group .row .rectangle {
+  color: #FFFFFF;
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 35.2px;
+  color: #FFFFFF;
+  background-color: #A259FF;
+  padding: 32px 15px;
+  border-radius: 20px;
+  width: 100px;
+}
+#trending-collection-section .bottom .cards .group p {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30.8px;
+  color: #FFFFFF;
+}
+#trending-collection-section .bottom .cards .group .mrfox {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+#trending-collection-section .bottom .cards .group .mrfox img {
+  width: 24px;
+  border-radius: 100px;
+}
+#trending-collection-section .bottom .cards .group .mrfox h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+}
+@media (max-width: 1280px) {
+  #trending-collection-section {
+    padding: 40px 0;
+  }
+  #trending-collection-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    color: #FFFFFF;
+  }
+  #trending-collection-section > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    margin: 10px 0 40px;
   }
 }
 
