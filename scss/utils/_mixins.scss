@@ -4,6 +4,12 @@
     gap: $gap;
 }
 
+@mixin justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin texts($font-size, $font-weight, $line-height) {
     font-size: $font-size;
     font-weight: $font-weight;

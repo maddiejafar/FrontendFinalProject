@@ -196,51 +196,53 @@ html {
 
     .bottom {
         display: flex;
-        justify-content: space-between;
-        .cards {
-            .group {
-                img {
-                    width: 330px;
-                    border-radius: 20px;
-                }
+        gap: 30px;
+        .group {
+            img {
+                width: 330px;
+                border-radius: 20px;
+            }
                 
-                .row {
-                    display: flex;
-                    gap: 15px;
-                    margin: 15px 0;
-                    img {
-                        width: 100px;
-                    }
-    
-                    .rectangle {
-                        color: $white-color;
-                        font-family: 'Space Mono', monospace;
-                        @include texts(22px, 700, 35.2px);
-                        background-color: $call-to-action;
-                        padding: 32px 15px;
-                        border-radius: 20px;
-                        width: 100px;
-                    }
+            .row {
+                display: flex;
+                gap: 15px;
+                margin: 15px 0;
+                img {
+                    width: 100px;
                 }
     
-                p {
-                    @include texts(22px, 600, 30.8px);
-                }
-    
-                .mrfox {
-                    display: flex;
-                    gap: 12px;
-                    margin-top: 10px;
-                    img {
-                        width: 24px;
-                        border-radius: 100px;
-                    }
-    
-                    h6 {
-                        @include texts(16px, 400, 22.4px);
-                    }
+                .rectangle {
+                    color: $white-color;
+                    font-family: 'Space Mono', monospace;
+                    @include texts(22px, 700, 35.2px);
+                    @include justify-center;
+                    background-color: $call-to-action;
+                    border-radius: 20px;
+                    width: 100px;
                 }
             }
+    
+            p {
+                @include texts(22px, 600, 30.8px);
+            }
+    
+            .mrfox {
+                display: flex;
+                gap: 12px;
+                margin-top: 10px;
+                img {
+                    width: 24px;
+                    border-radius: 100px;
+                }
+    
+                h6 {
+                    @include texts(16px, 400, 22.4px);
+                }
+            }
+        }
+
+        .group:nth-child(2) > .row .rectangle:last-child {
+            display: none;
         }
     }
 
@@ -255,6 +257,67 @@ html {
             @include texts(16px, 400, 22.4px);
             margin: 10px 0 40px;
         }
+
+        .bottom {
+            .group:last-child {
+                display: none;
+            }
+
+            .group:nth-child(2) > .row .rectangle:nth-child(3) {
+                display: none;
+            }
+
+            .group:nth-child(2) > .row .rectangle:last-child {
+                display: initial;
+                @include justify-center;
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        .bottom {
+            .group:nth-child(2) {
+                display: none;
+            }
+            .group {
+                img {
+                    width: 315px;
+                }              
+                .row {
+                    img {
+                        width: 95px;
+                    }
+        
+                    .rectangle {
+                        @include texts(16px, 700, 22.4px);
+                        width: 95px;
+                    }
+                }
+        
+                p {
+                    @include texts(22px, 600, 30.8px);
+                }
+        
+                .mrfox {
+                    display: flex;
+                    gap: 12px;
+                    margin-top: 10px;
+                    img {
+                        width: 24px;
+                        border-radius: 100px;
+                    }
+        
+                    h6 {
+                        @include texts(16px, 400, 22.4px);
+                    }
+                }
+            }
+    
+            .group:nth-child(2) > .row .rectangle:last-child {
+                display: none;
+            }
+        }
+    
     }
 }
 
