@@ -462,6 +462,136 @@ html {
   }
 }
 
+#top-rated-artists-section {
+  padding: 80px 0;
+}
+#top-rated-artists-section .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+#top-rated-artists-section .top .left h3 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 45.6px;
+  color: #FFFFFF;
+}
+#top-rated-artists-section .top .left > p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 35.2px;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+#top-rated-artists-section .top .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: transparent;
+  padding: 19px 50px;
+  cursor: pointer;
+  border: 2px solid #A259FF;
+}
+#top-rated-artists-section .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#top-rated-artists-section .bottom .card {
+  position: relative;
+  width: 240px;
+  height: 238px;
+  background-color: #3B3B3B;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+}
+#top-rated-artists-section .bottom .card > p {
+  font-family: "Space Mono", monospace;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #2B2B2B;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  color: #858584;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+#top-rated-artists-section .bottom .card img {
+  width: 120px;
+  border-radius: 100px;
+}
+#top-rated-artists-section .bottom .card h5 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30.8px;
+  color: #FFFFFF;
+  margin: 20px 0 5px;
+}
+#top-rated-artists-section .bottom .card .sales {
+  display: flex;
+  gap: 10px;
+}
+#top-rated-artists-section .bottom .card .sales p:first-child {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  color: #858584 !important;
+}
+#top-rated-artists-section .bottom .card .sales p:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  font-family: "Space Mono", monospace;
+}
+@media (max-width: 1280px) {
+  #top-rated-artists-section {
+    padding: 40px 0;
+  }
+  #top-rated-artists-section .top {
+    margin-bottom: 40px;
+  }
+  #top-rated-artists-section .top .left h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    color: #FFFFFF;
+  }
+  #top-rated-artists-section .top .left > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+  }
+  #top-rated-artists-section .top .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: transparent;
+    padding: 19px 50px;
+    cursor: pointer;
+    border: 2px solid #A259FF;
+  }
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 690px;

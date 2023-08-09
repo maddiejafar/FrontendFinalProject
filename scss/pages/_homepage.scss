@@ -321,6 +321,107 @@ html {
     }
 }
 
+#top-rated-artists-section {
+    padding: 80px 0;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 60px;
+        .left {
+            h3 {
+                @include texts (38px, 600, 45.6px);
+            }
+
+            > p {
+                @include texts (22px, 400, 35.2px);
+                margin-top: 10px;
+            }
+        }
+
+        .right {
+            @include buttons($white-color, transparent, 19px 50px);
+            border: 2px solid $call-to-action;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        .card {
+            position: relative;
+            > p {
+                font-family: 'Space Mono', monospace;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-color: $main-background-color;
+                @include texts (16px, 400, 22.4px);
+                color: #858584;
+                @include align-center(0);
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 20px;
+            }
+
+            width: 240px;
+            height: 238px;
+            background-color: $secondary-background-color;
+            border-radius: 20px;
+            padding: 20px;
+            @include align-center(0);
+            flex-direction: column;
+
+            img {
+                width: 120px;
+                border-radius: 100px;
+            }
+            
+            h5 {
+                @include texts (22px, 600, 30.8px);
+                margin: 20px 0 5px;
+            }
+
+            .sales {
+                display: flex;
+                gap: 10px;
+                p:first-child {
+                    @include texts (16px, 400, 22.4px);
+                    color: #858584 !important;    
+                }
+
+                p:last-child {
+                    @include texts (16px, 400, 22.4px);
+                    font-family: 'Space Mono', monospace;
+                }
+            }
+        }
+    }
+
+    @include for-type(tablet) {
+        padding: 40px 0;
+        .top {
+            margin-bottom: 40px;
+            .left {
+                h3 {
+                    @include texts (28px, 600, 39.2px);
+                }
+    
+                > p {
+                    @include texts (16px, 400, 22.4px);
+                }
+            }
+    
+            .right {
+                @include buttons($white-color, transparent, 19px 50px);
+                border: 2px solid $call-to-action;
+            }
+        }
+    }
+}
+
 
 
 
