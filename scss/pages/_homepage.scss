@@ -1,3 +1,82 @@
 html {
     background-color: $main-background-color;
 }
+
+.container {
+    width: 1050px;
+    margin: auto;
+    padding: 80px 0;
+}
+
+#hero-section {
+    display: flex;
+    justify-content: space-between;
+    .left {
+        width: 510px;
+
+        h2 {
+            @include texts(67px, 600, 73.7px);
+            margin-bottom: 20px;
+        }
+
+        > p {
+            @include texts(22px, 400px, 35.2px)
+        }
+
+        button {
+            @include texts(16px, 600, 22.4px);
+            @include buttons($white-color, $call-to-action, 19px 50px);
+            margin: 30px 0;
+        }
+
+        .statistics {
+            display: flex;
+            gap: 30px;
+            
+            h4 {
+                @include texts(28px, 700, 39.2px);
+                font-family: 'Space Mono', monospace;
+            }
+
+            p {
+                @include texts(23.99px, 400, 38.384px);
+            }
+        }
+    }
+    .right {
+        > img {
+            object-fit: cover;
+            width: 510px;
+            height: 401px;
+            border-radius: 20px 20px 0px 0px;
+        }
+        > div {
+            padding: 20px;
+            width: 510px;
+            height: 109px;
+            background-color: $secondary-background-color;
+            border-radius: 0px 0px 20px 20px;
+            margin-top: -2px;
+
+            h6 {
+                @include texts(22px, 600, 30.8px);
+                margin-bottom: 10px;
+            }
+
+            .animakid {
+                display: flex;
+                @include align-center(12px);
+                
+                > img {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 120px;
+                }
+
+                > p {
+                    @include texts(16px, 400, 22.4px);
+                }
+            }
+        }
+    } 
+}
