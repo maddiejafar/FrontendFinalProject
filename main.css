@@ -58,3 +58,46 @@ table {
 * {
   font-family: "Work Sans", sans-serif;
 }
+
+header {
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  padding: 20px 0px;
+  justify-content: space-between;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .right a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+header .right button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: #A259FF;
+  padding: 19px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
+}
+
+html {
+  background-color: #2B2B2B;
+}

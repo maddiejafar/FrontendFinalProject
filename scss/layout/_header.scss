@@ -1,0 +1,24 @@
+header {
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: space-between;
+
+    .left {
+        @include align-center(12px);
+    }
+
+    .right {
+        @include align-center(10px);
+        a {
+            @include texts(16px, 600, 22.4px);
+            padding: 0 20px;
+        }
+
+        button {
+            @include buttons($white-color, $call-to-action, 19px 30px);
+            @include texts(16px, 600, 22.4px);
+        }
+    }
+}
