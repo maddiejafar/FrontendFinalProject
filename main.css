@@ -62,14 +62,11 @@ table {
 header {
   width: 1280px;
   margin: auto;
-  display: flex;
-  padding: 20px 0px;
-  justify-content: space-between;
-}
-header .left {
+  padding: 20px 50px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0;
+  justify-content: space-between;
 }
 header .right {
   display: flex;
@@ -83,7 +80,7 @@ header .right a {
   color: #FFFFFF;
   padding: 0 20px;
 }
-header .right button {
+header .right .sign-up {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -96,6 +93,24 @@ header .right button {
   font-weight: 600;
   line-height: 22.4px;
   color: #FFFFFF;
+}
+header .burger-btn {
+  display: none;
+}
+@media (max-width: 1280px) {
+  header {
+    padding: 15px 50px;
+  }
+  header .left a img {
+    width: 182px;
+    height: 24px;
+  }
+  header .right {
+    display: none;
+  }
+  header .burger-btn {
+    display: initial;
+  }
 }
 
 html {

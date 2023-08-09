@@ -21,3 +21,21 @@
     padding: $padding;
     cursor: pointer;
 }
+
+@mixin for-type($type) {
+    @if $type == mobile {
+        @media (max-width: 834px) {
+            @content;
+        }
+    }
+    @else if $type == tablet {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: 1280px) {
+            @content;
+        }
+    }
+}

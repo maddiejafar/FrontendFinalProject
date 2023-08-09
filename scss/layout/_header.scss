@@ -1,13 +1,9 @@
 header {
     width: 1280px;
     margin: auto;
-    display: flex;
-    padding: 20px 0px;
+    padding: 20px 50px;
+    @include align-center(0);
     justify-content: space-between;
-
-    .left {
-        @include align-center(12px);
-    }
 
     .right {
         @include align-center(10px);
@@ -16,9 +12,34 @@ header {
             padding: 0 20px;
         }
 
-        button {
+        .sign-up {
             @include buttons($white-color, $call-to-action, 19px 30px);
             @include texts(16px, 600, 22.4px);
         }
+    }
+
+    .burger-btn {
+        display: none;
+    }
+
+
+    @include for-type(tablet) {
+        padding: 15px 50px;
+        .left {
+            a {
+                img {
+                    width: 182px;
+                    height: 24px;
+                }
+            }
+        }
+
+         .right {
+            display: none;
+         }
+
+         .burger-btn {
+            display: initial;
+         }
     }
 }
