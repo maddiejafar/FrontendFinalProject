@@ -5,24 +5,68 @@ html {
 .container {
     width: 1050px;
     margin: auto;
-    padding: 80px 0;
 }
 
 #hero-section {
-    display: flex;
-    justify-content: space-between;
-    .left {
-        width: 510px;
+    padding: 80px 0;
+    //display: flex;
+    //justify-content: space-between;
 
-        h2 {
-            @include texts(67px, 600, 73.7px);
-            margin-bottom: 20px;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        .left {
+            width: 510px;
+    
+            h2 {
+                @include texts(67px, 600, 73.7px);
+                margin-bottom: 20px;
+            }
+    
+            > p {
+                @include texts(22px, 400px, 35.2px)
+            }
         }
 
-        > p {
-            @include texts(22px, 400px, 35.2px)
-        }
+        .right {
+            > img {
+                object-fit: cover;
+                width: 510px;
+                height: 401px;
+                border-radius: 20px 20px 0px 0px;
+            }
+            > div {
+                padding: 20px;
+                width: 510px;
+                height: 109px;
+                background-color: $secondary-background-color;
+                border-radius: 0px 0px 20px 20px;
+                margin-top: -2px;
+    
+                h6 {
+                    @include texts(22px, 600, 30.8px);
+                    margin-bottom: 10px;
+                }
+    
+                .animakid {
+                    @include align-center(12px);
+                    
+                    > img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 120px;
+                    }
+    
+                    > p {
+                        @include texts(16px, 400, 22.4px);
+                    }
+                }
+            }
+        } 
+    }
 
+    .bottom {
+        margin-top: -170px;
         button {
             @include texts(16px, 600, 22.4px);
             @include buttons($white-color, $call-to-action, 19px 50px);
@@ -43,40 +87,110 @@ html {
             }
         }
     }
-    .right {
-        > img {
-            object-fit: cover;
-            width: 510px;
-            height: 401px;
-            border-radius: 20px 20px 0px 0px;
-        }
-        > div {
-            padding: 20px;
-            width: 510px;
-            height: 109px;
-            background-color: $secondary-background-color;
-            border-radius: 0px 0px 20px 20px;
-            margin-top: -2px;
 
-            h6 {
-                @include texts(22px, 600, 30.8px);
-                margin-bottom: 10px;
+
+    @include for-type(tablet) {
+        .top {
+            .left {
+                width: 330px;
+    
+                h2 {
+                    @include texts(38px, 600, 45.6px);
+                }
+    
+                > p {
+                    @include texts(16px, 400px, 22.4px)
+                }
             }
 
-            .animakid {
-                display: flex;
-                @include align-center(12px);
-                
+            .right {
                 > img {
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 120px;
+                    width: 330px;
+                    height: 221px;
                 }
+    
+                > div {
+                    width: 330px;
+                }
+            }
+        }
 
-                > p {
+        .bottom {
+            margin-top: -100px;
+            button {
+                margin: 20px 0;
+            }
+
+            .statistics {
+                h4 {
+                    @include texts(22px, 700, 35.2px);
+                }
+    
+                p {
                     @include texts(16px, 400, 22.4px);
                 }
             }
         }
-    } 
+    }
+
+    @include for-type(mobile) {
+        padding: 40px 0;
+        .top {
+            flex-direction: column;
+            gap: 40px;
+
+            .left {
+                width: 315px;
+    
+                h2 {
+                    @include texts(28px, 600, 39.2px);
+                    margin-bottom: 10px;
+                }
+            }
+
+            .right {
+                > img {
+                    width: 315px;
+                    height: 206px;
+                }
+    
+                > div {
+                    width: 315px;
+                }
+            }
+        }
+
+        .bottom {
+            margin-top: 0px;
+            button {
+                @include buttons($white-color, $call-to-action, 19px 95.5px);
+                margin: 40px 0;
+            }
+
+            .statistics {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@include for-type(tablet) {
+    .container {
+        width: 690px;
+    }
+}
+
+@include for-type(mobile) {
+    .container {
+        width: 315px;
+    }
 }

@@ -24,6 +24,7 @@ header {
 
 
     @include for-type(tablet) {
+        width: 834px;
         padding: 15px 50px;
         .left {
             a {
@@ -41,5 +42,10 @@ header {
          .burger-btn {
             display: initial;
          }
+    }
+
+    @include for-type(mobile) {
+        width: 375px;
+        padding: 15px 30px;
     }
 }
