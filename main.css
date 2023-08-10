@@ -1037,6 +1037,73 @@ html {
   width: 270px;
   text-align: center;
 }
+@media (max-width: 1280px) {
+  #how-it-works-section {
+    padding: 40px 0;
+  }
+  #how-it-works-section .top {
+    margin-bottom: 40px;
+  }
+  #how-it-works-section .top h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    color: #FFFFFF;
+  }
+  #how-it-works-section .top > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+  }
+  #how-it-works-section .bottom .card {
+    width: 210px;
+    height: 320px;
+    padding: 10px 20px 30px;
+  }
+  #how-it-works-section .bottom .card img {
+    width: 160px;
+  }
+  #how-it-works-section .bottom .card .text h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    text-transform: none;
+  }
+  #how-it-works-section .bottom .card .text > p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #FFFFFF;
+    width: 170px;
+  }
+}
+@media (max-width: 834px) {
+  #how-it-works-section .bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #how-it-works-section .bottom .card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 315px;
+    height: 157px;
+    padding: 20px;
+  }
+  #how-it-works-section .bottom .card img {
+    width: 100px;
+  }
+  #how-it-works-section .bottom .card .text h5 {
+    text-align: start;
+  }
+  #how-it-works-section .bottom .card .text > p {
+    width: 155px;
+    margin: 0 0 10px;
+    text-align: start;
+  }
+}
 
 @media (max-width: 1280px) {
   .container {

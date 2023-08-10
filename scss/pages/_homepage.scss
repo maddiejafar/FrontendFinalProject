@@ -840,6 +840,72 @@ html {
             }
         }
     }
+
+    @include for-type(tablet) {
+        padding: 40px 0;
+        .top {
+            margin-bottom: 40px;
+            h3 {
+                @include texts(28px, 600, 39.2px);
+            }
+    
+            >p {
+                @include texts(16px, 400, 22.4px);
+            }
+        }
+
+        .bottom {
+            .card {
+                width: 210px;
+                height: 320px;
+                padding: 10px 20px 30px;
+                img {
+                    width: 160px;
+                }
+                .text {
+                    h5 {
+                        @include texts(16px, 600, 22.4px);
+                        text-transform: none;
+                    }
+    
+                    >p {
+                        @include texts(12px, 400, 16.8px);
+                        width: 170px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        .bottom {
+            flex-direction: column;
+            gap: 20px;
+
+            .card {
+                @include space-between;
+                flex-direction: row;
+                width: 315px;
+                height: 157px;
+                padding: 20px;
+
+                img {
+                    width: 100px;
+                }
+
+                .text {
+                    h5 {
+                        text-align: start;
+                    }
+                    >p {
+                        width: 155px;
+                        margin: 0 0 10px; 
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
