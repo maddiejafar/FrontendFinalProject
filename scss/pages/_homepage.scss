@@ -515,6 +515,62 @@ html {
             }
         }
     }
+
+    @include for-type(tablet) {
+        padding: 40px 0;
+
+        h3 {
+            @include texts(28px, 600, 39.2px);
+            margin-bottom: 40px;
+        }
+
+        .group {
+            .card {
+                .top {
+                    img:first-child {
+                        width: 150px;
+                        height: 142px;
+                    }
+    
+                    img:last-child {
+                        width: 80px;
+                        top: 31px;
+                        left: 35px;
+                    }
+                }
+    
+                .bottom {
+                    width: 150px;
+                    height: 67px;
+                    padding: 20px 20px 25px;
+                    @include texts(16px, 600, 22.4px);
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        padding-top: 130px;
+        .group {
+            gap: 20px;
+            .card {
+                .top {
+                    img:first-child {
+                        width: 147px;
+                    }
+    
+                    img:last-child {
+                        left: 35px;
+                    }
+                }
+    
+                .bottom {
+                    width: 147px;
+                }
+            }
+        }
+    }
 }
 
 
