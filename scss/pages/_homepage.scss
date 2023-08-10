@@ -766,6 +766,38 @@ html {
             }
         }
     }
+
+    @include for-type(tablet) {
+        img {
+            height: 630px;
+        }
+
+        .content {
+            left: 82px;
+            h2 {
+                @include texts(38px, 600, 45.6px);
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        padding-top: 105px;
+        img {
+            height: 593px;
+        }
+
+        .content {
+            bottom: 40px;
+            left: 30px;
+            h2 {
+                width: 315px;
+            }
+
+            button:last-child {
+                @include buttons($main-background-color, $white-color, 19px 108.5px);
+            }
+        }
+    }
 }
 
 
