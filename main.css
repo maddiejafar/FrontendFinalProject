@@ -1181,6 +1181,64 @@ html {
   line-height: 22.4px;
   color: #FFFFFF;
 }
+@media (max-width: 1280px) {
+  #subscribe-section .rectangle {
+    width: 690px;
+    height: 360px;
+    padding: 40px 30px;
+    gap: 30px;
+  }
+  #subscribe-section .rectangle .left img {
+    width: 300px;
+    height: 280px;
+  }
+  #subscribe-section .rectangle .right h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    color: #FFFFFF;
+  }
+  #subscribe-section .rectangle .right > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    text-transform: none;
+  }
+  #subscribe-section .rectangle .right .input-button input {
+    width: 300px;
+    height: 46px;
+    padding: 16px 20px;
+  }
+  #subscribe-section .rectangle .right .input-button button {
+    padding: 12px 94.5px;
+    position: static;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 834px) {
+  #subscribe-section {
+    padding: 40px 0;
+  }
+  #subscribe-section .rectangle {
+    width: 315px;
+    height: 565px;
+    padding: 0;
+    flex-direction: column;
+    background-color: transparent;
+  }
+  #subscribe-section .rectangle .left img {
+    width: 315px;
+    height: 255px;
+  }
+  #subscribe-section .rectangle .right .input-button input {
+    width: 315px;
+    padding: 12px 20px;
+  }
+  #subscribe-section .rectangle .right .input-button button {
+    padding: 12px 102.5px;
+  }
+}
 
 @media (max-width: 1280px) {
   .container {

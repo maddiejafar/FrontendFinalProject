@@ -964,6 +964,77 @@ html {
             }
         }
     }
+
+    @include for-type(tablet) {
+        .rectangle {
+            width: 690px;
+            height: 360px;
+            padding: 40px 30px;
+            gap: 30px;
+            .left {
+                img {
+                    width: 300px;
+                    height: 280px;
+                }
+            }
+    
+            .right {
+                h3 {
+                    @include texts(28px, 600, 39.2px);
+                }
+    
+                >p {
+                    @include texts(16px, 400, 22.4px); 
+                    text-transform: none;
+                }
+    
+                .input-button {
+                    input {
+                        width: 300px;
+                        height: 46px;
+                        padding: 16px 20px;
+                    }
+    
+                    button {
+                        padding: 12px 94.5px;
+                        position: static;
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        padding: 40px 0;
+
+        .rectangle {
+            width: 315px;
+            height: 565px;
+            padding: 0;
+            flex-direction: column;
+            background-color: transparent;
+            .left {
+                img {
+                    width: 315px;
+                    height: 255px;
+                }
+            }
+    
+            .right {
+                .input-button {
+                    input {
+                        width: 315px;
+                        padding: 12px 20px;
+                    }
+    
+                    button {
+                        padding: 12px 102.5px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
