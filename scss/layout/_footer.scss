@@ -1,0 +1,97 @@
+footer {
+    padding: 40px 0;
+    background-color: $secondary-background-color;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        width: 988px;
+        margin: auto;
+        .group {
+            p {
+                @include texts(16px, 400, 22.4px);
+                color: #CCCCCC;
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                @include texts(22px, 700, 35.2px);
+                font-family: Space Mono;
+                margin-bottom: 25px;
+            }
+
+            .input-button {
+                display: inline-block;
+                position: relative;
+
+                input {
+                    width: 420px;
+                    height: 60px;
+                    padding: 19px 191px 19px 20px;
+                    border-radius: 20px;
+                    outline: none;
+
+                    &::placeholder {
+                        @include texts(16px, 400, 22.4px);
+                        color: $main-background-color;
+                    }
+                }
+
+                button {
+                    @include buttons($white-color, $call-to-action, 19px 50px);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @include texts(16px, 600, 22.4px); 
+                }
+            }
+        }
+    }
+
+    .bottom {
+        margin: auto;
+        width: 1050px;
+        div {
+            height: 1px;
+            background-color: #858584;
+            margin: 30px 0 20px;
+        }
+
+        p {
+            @include texts(12px, 400, 13.2px);
+            color: #CCCCCC;
+        }
+    }
+
+    @include for-type(tablet) {
+        .top {
+            width: 690px;
+            flex-direction: column;
+            //gap: 30px;
+            .group {
+                //margin-bottom: 30px;
+                a img {
+                    margin-bottom: 20px !important;
+                }
+                p {
+                    width: 690px;
+                }
+    
+                h5 {
+                    margin-bottom: 20px;
+                    //margin-top: ;
+                }
+
+                //.icons {
+                    //margin-bottom: 30px;
+                //}
+            }
+        }
+
+        .bottom {
+            width: 690px;
+            div {
+                margin: 49px 0 20px;
+            }
+        }
+    }
+}
