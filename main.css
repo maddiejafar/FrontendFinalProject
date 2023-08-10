@@ -1105,6 +1105,83 @@ html {
   }
 }
 
+#subscribe-section {
+  padding: 40px 0 80px;
+}
+#subscribe-section .rectangle {
+  width: 1050px;
+  height: 430px;
+  padding: 60px;
+  border-radius: 20px;
+  background-color: #3B3B3B;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+#subscribe-section .rectangle .left img {
+  width: 425px;
+  height: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+#subscribe-section .rectangle .right h3 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 45.6px;
+  color: #FFFFFF;
+}
+#subscribe-section .rectangle .right > p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 35.2px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin: 10px 0 40px;
+}
+#subscribe-section .rectangle .right .input-button {
+  display: inline-block;
+  position: relative;
+}
+#subscribe-section .rectangle .right .input-button input {
+  width: 425px;
+  height: 60px;
+  padding: 19px 223px 19px 20px;
+  border-radius: 20px;
+  outline: none;
+}
+#subscribe-section .rectangle .right .input-button input::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  color: #2B2B2B;
+}
+#subscribe-section .rectangle .right .input-button input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  color: #2B2B2B;
+}
+#subscribe-section .rectangle .right .input-button button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  color: #2B2B2B;
+  background-color: #A259FF;
+  padding: 19px 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 690px;

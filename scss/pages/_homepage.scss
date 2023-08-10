@@ -908,6 +908,64 @@ html {
     }
 }
 
+#subscribe-section {
+    padding: 40px 0 80px;
+    .rectangle {
+        width: 1050px;
+        height: 430px;
+        padding: 60px;
+        border-radius: 20px;
+        background-color: $secondary-background-color;
+        @include align-center(80px);
+        .left {
+            img {
+                width: 425px;
+                height: 310px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+
+        .right {
+            h3 {
+                @include texts(38px, 600, 45.6px);
+            }
+
+            >p {
+                @include texts(22px, 400, 35.2px); 
+                text-transform: capitalize;
+                margin: 10px 0 40px;
+            }
+
+            .input-button {
+                display: inline-block;
+                position: relative;
+
+                input {
+                    width: 425px;
+                    height: 60px;
+                    padding: 19px 223px 19px 20px;
+                    border-radius: 20px;
+                    outline: none;
+
+                    &::placeholder {
+                        @include texts(16px, 400, 22.4px);
+                        color: $main-background-color;
+                    }
+                }
+
+                button {
+                    @include buttons($main-background-color, $call-to-action, 19px 50px);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @include texts(16px, 600, 22.4px); 
+                }
+            }
+        }
+    }
+}
+
 
 
 
