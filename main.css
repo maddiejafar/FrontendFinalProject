@@ -890,6 +890,64 @@ html {
   }
 }
 
+#nft-info-section {
+  position: relative;
+}
+#nft-info-section img {
+  width: 100%;
+  height: 640px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#nft-info-section .content {
+  position: absolute;
+  bottom: 60px;
+  left: 115px;
+}
+#nft-info-section .content button:first-child {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: #2B2B2B;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#nft-info-section .content button:first-child img {
+  height: 24px;
+  border-radius: 120px;
+}
+#nft-info-section .content h2 {
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 56.1px;
+  color: #FFFFFF;
+  margin: 30px 0;
+}
+#nft-info-section .content button:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  color: #2B2B2B;
+  background-color: #FFFFFF;
+  padding: 22px 50px;
+  cursor: pointer;
+}
+#nft-info-section .content button:last-child img {
+  height: 20px;
+  width: 20px;
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 690px;
