@@ -603,7 +603,8 @@ html {
         display: flex;
         gap: 30px;
         .group {
-            > img {
+            >img {
+                object-fit: cover;
                 width: 330px;
                 height: 296px;
                 border-radius: 20px 20px 0px 0px;
@@ -678,7 +679,7 @@ html {
         .bottom {
             gap: 20px;
             .group {
-                > img {
+                >img {
                     height: 295px;
                 }
             }
@@ -703,7 +704,7 @@ html {
         .bottom {
             flex-direction: column;
             .group {
-                > img {
+                >img {
                     width: 315px;
                     height: 238px;
                 }

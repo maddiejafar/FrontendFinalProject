@@ -760,6 +760,8 @@ html {
   gap: 30px;
 }
 #discover-more-section .bottom .group > img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 330px;
   height: 296px;
   border-radius: 20px 20px 0px 0px;
