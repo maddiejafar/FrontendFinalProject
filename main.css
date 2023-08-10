@@ -632,6 +632,47 @@ html {
   }
 }
 
+#browse-categories-section {
+  padding: 80px 0;
+}
+#browse-categories-section h3 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 45.6px;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+#browse-categories-section .group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#browse-categories-section .group .card .top {
+  position: relative;
+}
+#browse-categories-section .group .card .top img:first-child {
+  width: 240px;
+  border-radius: 20px 20px 0px 0px;
+}
+#browse-categories-section .group .card .top img:last-child {
+  width: 100px;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+}
+#browse-categories-section .group .card .bottom {
+  width: 240px;
+  height: 76px;
+  padding: 20px 30px 25px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #3B3B3B;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30.8px;
+  color: #FFFFFF;
+  margin-top: -3px;
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 690px;

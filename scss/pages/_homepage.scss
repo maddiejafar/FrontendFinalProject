@@ -478,6 +478,44 @@ html {
     }
 }
 
+#browse-categories-section {
+    padding: 80px 0;
+    h3 {
+        @include texts(38px, 600, 45.6px);
+        margin-bottom: 60px;
+    }
+    .group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        .card {
+            .top {
+                position: relative;
+                img:first-child {
+                    width: 240px;
+                    border-radius: 20px 20px 0px 0px;
+                }
+
+                img:last-child {
+                    width: 100px;
+                    position: absolute;
+                    top: 70px;
+                    left: 70px;
+                }
+            }
+
+            .bottom {
+                width: 240px;
+                height: 76px;
+                padding: 20px 30px 25px;
+                border-radius: 0px 0px 20px 20px;
+                background-color: $secondary-background-color;
+                @include texts(22px, 600, 30.8px);
+                margin-top: -3px;
+            }
+        }
+    }
+}
 
 
 
