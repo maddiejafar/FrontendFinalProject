@@ -23,12 +23,14 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    >img {
-        width: 120px;
-        border: 2px solid $main-background-color;
-        border-radius: 20px;
-        margin-top: -60px;
-        margin-bottom: 10px;
+    .img {
+        img {
+            width: 120px;
+            border: 2px solid $main-background-color;
+            border-radius: 20px;
+            margin-top: -60px;
+            margin-bottom: 10px;
+        }
     }
 
     .animakid {
@@ -77,12 +79,88 @@
     .text {
         p {
             @include texts(22px, 400, 35.2px);
+            text-transform: capitalize;
         }
         h5 {
             @include texts(22px, 700, 35.2px);
             color: #858584;
-            text-transform: capitalize;
             font-family: Space Mono;
+            margin-bottom: 10px;
         }
+    }
+
+    @include for-type(tablet) {
+        padding-bottom: 30px;
+
+        .img {
+            img {
+                margin-bottom: 0px;
+            }
+        }
+
+        .animakid {
+            flex-direction: column;
+            gap: 30px;
+            h2 {
+                @include texts(38px, 600, 45.6px);
+            }
+
+        }
+
+        .statistics {
+            .number {
+                h4 {
+                    @include texts(22px, 700, 35.2px);
+                }
+    
+                h6
+                 {
+                    @include texts(16px, 400, 22.4px);
+                }
+            }
+        }
+
+        .text {
+            p {
+                @include texts(16px, 400, 22.4px);
+                text-transform: none;
+            }
+            h5 {
+                @include texts(16px, 400, 22.4px);
+                color: #858584;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        .img {
+            display: flex;
+            justify-content: center
+        }
+        .animakid {
+            h2 {
+                @include texts(28px, 600, 39.2px);
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                button:first-child {
+                    @include buttons($white-color, $call-to-action, 19px 85px);
+                }
+    
+                button:last-child {
+                    @include buttons($white-color, transparent, 19px 115px);
+                }
+            }
+        }
+
+        .statistics {
+            .number {
+                width: 91px;
+            }
+        }
+        
     }
 }

@@ -1379,7 +1379,7 @@ html {
   flex-direction: column;
   gap: 30px;
 }
-#artist-info-section > img {
+#artist-info-section .img img {
   width: 120px;
   border: 2px solid #2B2B2B;
   border-radius: 20px;
@@ -1452,6 +1452,7 @@ html {
   font-weight: 400;
   line-height: 35.2px;
   color: #FFFFFF;
+  text-transform: capitalize;
 }
 #artist-info-section .text h5 {
   font-size: 22px;
@@ -1459,6 +1460,90 @@ html {
   line-height: 35.2px;
   color: #FFFFFF;
   color: #858584;
-  text-transform: capitalize;
   font-family: Space Mono;
+  margin-bottom: 10px;
+}
+@media (max-width: 1280px) {
+  #artist-info-section {
+    padding-bottom: 30px;
+  }
+  #artist-info-section .img img {
+    margin-bottom: 0px;
+  }
+  #artist-info-section .animakid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #artist-info-section .animakid h2 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 45.6px;
+    color: #FFFFFF;
+  }
+  #artist-info-section .statistics .number h4 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 35.2px;
+    color: #FFFFFF;
+  }
+  #artist-info-section .statistics .number h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+  }
+  #artist-info-section .text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    text-transform: none;
+  }
+  #artist-info-section .text h5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    color: #858584;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 834px) {
+  #artist-info-section .img {
+    display: flex;
+    justify-content: center;
+  }
+  #artist-info-section .animakid h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    color: #FFFFFF;
+  }
+  #artist-info-section .animakid .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  #artist-info-section .animakid .buttons button:first-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #A259FF;
+    padding: 19px 85px;
+    cursor: pointer;
+  }
+  #artist-info-section .animakid .buttons button:last-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: transparent;
+    padding: 19px 115px;
+    cursor: pointer;
+  }
+  #artist-info-section .statistics .number {
+    width: 91px;
+  }
 }
