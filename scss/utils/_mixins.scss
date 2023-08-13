@@ -31,6 +31,7 @@
     background-color: $background-color;
     padding: $padding;
     cursor: pointer;
+    justify-content: center;
 }
 
 @mixin for-type($type) {

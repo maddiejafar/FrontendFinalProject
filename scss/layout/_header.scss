@@ -28,6 +28,23 @@ header {
         display: none;
     }
 
+    .hamburger-menu {
+        position: absolute;
+        top: -520px;
+        right: 0;
+        width: 315px;
+        height: 490px;
+        padding: 30px;
+        display: none;
+        flex-direction: column;
+        background-color: $secondary-background-color;
+        border-radius: 20px;
+        gap: 40px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.5s;
+        z-index: 1;
+    }
+
 
     @include for-type(tablet) {
         width: 834px;
@@ -48,10 +65,55 @@ header {
          .burger-btn {
             display: initial;
          }
+
+         .hamburger-menu {
+            display: flex;
+
+            .close {
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                background-color: transparent;
+            }
+    
+            a {
+                @include texts(16px, 600, 22.4px);
+                @include align-center(0);
+                justify-content: space-between;
+
+                >img {
+                    width: 30px;
+                }
+            }
+    
+            .logo img {
+                width: 182px;
+                height: 24px;
+                margin-bottom: 20px;
+            }
+    
+            .sign-up {
+                @include buttons($white-color, $call-to-action, 10px 30px);
+                @include texts(16px, 600, 22.4px);
+                transition: 0.5s;
+                margin-top: 80px;
+    
+                &:hover {
+                    background-color: #663dff;
+                    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                }
+            }
+        }
     }
 
     @include for-type(mobile) {
         width: 375px;
         padding: 15px 30px;
+
+        .hamburger-menu {
+            margin: auto;
+            right: auto;
+
+        }
     }
 }

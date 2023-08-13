@@ -89,6 +89,7 @@ header .right .sign-up {
   background-color: #A259FF;
   padding: 19px 30px;
   cursor: pointer;
+  justify-content: center;
   font-size: 16px;
   font-weight: 600;
   line-height: 22.4px;
@@ -101,6 +102,22 @@ header .right .sign-up:hover {
 }
 header .burger-btn {
   display: none;
+}
+header .hamburger-menu {
+  position: absolute;
+  top: -520px;
+  right: 0;
+  width: 315px;
+  height: 490px;
+  padding: 30px;
+  display: none;
+  flex-direction: column;
+  background-color: #3B3B3B;
+  border-radius: 20px;
+  gap: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.5s;
+  z-index: 1;
 }
 @media (max-width: 1280px) {
   header {
@@ -117,11 +134,63 @@ header .burger-btn {
   header .burger-btn {
     display: initial;
   }
+  header .hamburger-menu {
+    display: flex;
+  }
+  header .hamburger-menu .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-color: transparent;
+  }
+  header .hamburger-menu a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: space-between;
+  }
+  header .hamburger-menu a > img {
+    width: 30px;
+  }
+  header .hamburger-menu .logo img {
+    width: 182px;
+    height: 24px;
+    margin-bottom: 20px;
+  }
+  header .hamburger-menu .sign-up {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #A259FF;
+    padding: 10px 30px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    transition: 0.5s;
+    margin-top: 80px;
+  }
+  header .hamburger-menu .sign-up:hover {
+    background-color: #663dff;
+    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+  }
 }
 @media (max-width: 834px) {
   header {
     width: 375px;
     padding: 15px 30px;
+  }
+  header .hamburger-menu {
+    margin: auto;
+    right: auto;
   }
 }
 
@@ -200,6 +269,7 @@ footer .top .group .input-button button {
   background-color: #A259FF;
   padding: 19px 50px;
   cursor: pointer;
+  justify-content: center;
   position: absolute;
   right: 0;
   top: 0;
@@ -282,6 +352,7 @@ footer .bottom p {
     background-color: #A259FF;
     padding: 12px 102px;
     cursor: pointer;
+    justify-content: center;
     position: static;
   }
   footer .top .group .input-button button img {
@@ -380,6 +451,7 @@ html {
   background-color: #A259FF;
   padding: 19px 50px;
   cursor: pointer;
+  justify-content: center;
   font-size: 16px;
   font-weight: 600;
   line-height: 22.4px;
@@ -495,6 +567,7 @@ html {
     background-color: #A259FF;
     padding: 19px 95.5px;
     cursor: pointer;
+    justify-content: center;
     margin: 40px 0;
   }
   #hero-section .bottom .statistics div {
@@ -696,6 +769,7 @@ html {
   background-color: transparent;
   padding: 19px 50px;
   cursor: pointer;
+  justify-content: center;
   font-size: 16px;
   font-weight: 600;
   line-height: 22.4px;
@@ -727,7 +801,6 @@ html {
   gap: 20px;
   border: 2px solid transparent;
   transition: 0.5s;
-  cursor: pointer;
 }
 #top-rated-artists-section .bottom .card:hover {
   border-color: #A259FF;
@@ -843,6 +916,7 @@ html {
     background-color: transparent;
     padding: 19px 83px;
     cursor: pointer;
+    justify-content: center;
   }
   #top-rated-artists-section .bottom .card:nth-child(6) {
     display: none;
@@ -1007,6 +1081,7 @@ html {
   background-color: transparent;
   padding: 19px 50px;
   cursor: pointer;
+  justify-content: center;
   border: 2px solid #A259FF;
 }
 #discover-more-section .top .right:hover {
@@ -1134,6 +1209,7 @@ html {
     background-color: transparent;
     padding: 19px 114px;
     cursor: pointer;
+    justify-content: center;
   }
   #discover-more-section .bottom {
     gap: 20px;
@@ -1193,6 +1269,7 @@ html {
   background-color: #3B3B3B;
   padding: 10px 20px;
   cursor: pointer;
+  justify-content: center;
 }
 #nft-info-section .content button:first-child img {
   height: 24px;
@@ -1218,6 +1295,7 @@ html {
   background-color: #FFFFFF;
   padding: 19px 48px;
   cursor: pointer;
+  justify-content: center;
   border: 3px solid transparent;
 }
 #nft-info-section .content button:last-child img {
@@ -1270,6 +1348,7 @@ html {
     background-color: #FFFFFF;
     padding: 19px 108.5px;
     cursor: pointer;
+    justify-content: center;
   }
 }
 
@@ -1465,6 +1544,7 @@ html {
   background-color: #A259FF;
   padding: 19px 50px;
   cursor: pointer;
+  justify-content: center;
   position: absolute;
   right: 0;
   top: 0;
@@ -1607,6 +1687,7 @@ html {
   background-color: #A259FF;
   padding: 19px 20.5px;
   cursor: pointer;
+  justify-content: center;
   transition: 0.5s;
 }
 #artist-info-section .animakid .buttons button:first-child img {
@@ -1625,6 +1706,7 @@ html {
   background-color: transparent;
   padding: 19px 30px;
   cursor: pointer;
+  justify-content: center;
   border: 2px solid #A259FF;
 }
 #artist-info-section .animakid .buttons button:last-child img {
@@ -1741,6 +1823,7 @@ html {
     background-color: #A259FF;
     padding: 19px 85px;
     cursor: pointer;
+    justify-content: center;
   }
   #artist-info-section .animakid .buttons button:last-child {
     display: flex;
@@ -1751,6 +1834,7 @@ html {
     background-color: transparent;
     padding: 19px 115px;
     cursor: pointer;
+    justify-content: center;
   }
   #artist-info-section .statistics .number {
     width: 91px;
@@ -1955,6 +2039,7 @@ html {
   background-color: #A259FF;
   padding: 12px 105px;
   cursor: pointer;
+  justify-content: center;
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -2001,6 +2086,7 @@ html {
     background-color: #A259FF;
     padding: 12px 102.5px;
     cursor: pointer;
+    justify-content: center;
   }
 }
 @media (max-width: 834px) {
@@ -2030,5 +2116,6 @@ html {
     background-color: #A259FF;
     padding: 12px 97.5px;
     cursor: pointer;
+    justify-content: center;
   }
 }
