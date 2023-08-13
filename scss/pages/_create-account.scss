@@ -28,7 +28,7 @@
 
                 input {
                     width: 100%;
-                    padding: 12px 20px 12px 52px;
+                    padding: 10.5px 20px 10.5px 52px;
                     border: 2px solid transparent;
                     border-radius: 20px;
                     @include texts(16px, 400, 22.4px);
@@ -51,18 +51,23 @@
 
                 img {
                     position: absolute;
-                    top: 16px;
+                    top: 14px;
                     left: 20px;
                   }
             }
 
             button {
-                @include buttons($white-color, $call-to-action, 12px 104.5px);
-                //width: 330px;
+                @include buttons($white-color, $call-to-action, 12px 105px);
                 display: flex;
                 justify-content: center;
                 margin-top: 30px;
                 @include texts (16px, 600, 22.4px);
+                transition: 0.5s;
+
+                &:hover {
+                    background-color: #663dff;
+                    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                }
               }
         }
     }

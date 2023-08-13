@@ -1899,7 +1899,7 @@ html {
 }
 #create-account-section .right form .input-container input {
   width: 100%;
-  padding: 12px 20px 12px 52px;
+  padding: 10.5px 20px 10.5px 52px;
   border: 2px solid transparent;
   border-radius: 20px;
   font-size: 16px;
@@ -1923,7 +1923,7 @@ html {
 }
 #create-account-section .right form .input-container img {
   position: absolute;
-  top: 16px;
+  top: 14px;
   left: 20px;
 }
 #create-account-section .right form button {
@@ -1933,7 +1933,7 @@ html {
   border-radius: 20px;
   color: #FFFFFF;
   background-color: #A259FF;
-  padding: 12px 104.5px;
+  padding: 12px 105px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -1942,6 +1942,11 @@ html {
   font-weight: 600;
   line-height: 22.4px;
   color: #FFFFFF;
+  transition: 0.5s;
+}
+#create-account-section .right form button:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 @media (max-width: 1280px) {
   #create-account-section {
