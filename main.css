@@ -93,6 +93,11 @@ header .right .sign-up {
   font-weight: 600;
   line-height: 22.4px;
   color: #FFFFFF;
+  transition: 0.5s;
+}
+header .right .sign-up:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 header .burger-btn {
   display: none;
@@ -130,6 +135,9 @@ footer .top {
   width: 988px;
   margin: auto;
 }
+footer .top .group .logo img {
+  margin-bottom: 25px;
+}
 footer .top .group p {
   font-size: 16px;
   font-weight: 400;
@@ -137,6 +145,18 @@ footer .top .group p {
   color: #FFFFFF;
   color: #CCCCCC;
   margin-bottom: 20px;
+}
+footer .top .group .a-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .top .group .a-tags a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  color: #CCCCCC;
 }
 footer .top .group h5 {
   font-size: 22px;
@@ -187,6 +207,14 @@ footer .top .group .input-button button {
   font-weight: 600;
   line-height: 22.4px;
   color: #FFFFFF;
+  transition: 0.5s;
+}
+footer .top .group .input-button button img {
+  display: none;
+}
+footer .top .group .input-button button:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 footer .bottom {
   margin: auto;
@@ -208,12 +236,13 @@ footer .bottom p {
   footer .top {
     width: 690px;
     flex-direction: column;
+    gap: 30px;
   }
-  footer .top .group a img {
-    margin-bottom: 20px !important;
+  footer .top .group .logo img {
+    margin-bottom: 25px;
   }
   footer .top .group p {
-    width: 690px;
+    width: 690px !important;
   }
   footer .top .group h5 {
     margin-bottom: 20px;
@@ -223,6 +252,46 @@ footer .bottom p {
   }
   footer .bottom div {
     margin: 49px 0 20px;
+  }
+}
+@media (max-width: 834px) {
+  footer .top {
+    width: 315px;
+  }
+  footer .top .group p {
+    width: 315px !important;
+  }
+  footer .top .group .input-button input {
+    width: 315px;
+    height: 46px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+  }
+  footer .top .group .input-button input::-moz-placeholder {
+    text-transform: capitalize;
+  }
+  footer .top .group .input-button input::placeholder {
+    text-transform: capitalize;
+  }
+  footer .top .group .input-button button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #A259FF;
+    padding: 12px 102px;
+    cursor: pointer;
+    position: static;
+  }
+  footer .top .group .input-button button img {
+    display: initial;
+  }
+  footer .bottom {
+    width: 315px;
+  }
+  footer .bottom div {
+    margin: 30px 0 20px;
   }
 }
 
@@ -257,6 +326,9 @@ html {
   font-weight: 400px;
   line-height: 35.2px;
   color: #FFFFFF;
+}
+#hero-section .top .right {
+  cursor: pointer;
 }
 #hero-section .top .right > img {
   -o-object-fit: cover;
@@ -300,10 +372,6 @@ html {
   margin-top: -170px;
 }
 #hero-section .bottom button {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22.4px;
-  color: #FFFFFF;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -312,7 +380,16 @@ html {
   background-color: #A259FF;
   padding: 19px 50px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  transition: 0.5s;
   margin: 30px 0;
+}
+#hero-section .bottom button:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 #hero-section .bottom .statistics {
   display: flex;
@@ -445,17 +522,30 @@ html {
   display: flex;
   gap: 30px;
 }
-#trending-collection-section .bottom .group img {
+#trending-collection-section .bottom .group > img:first-child {
   width: 330px;
   border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+#trending-collection-section .bottom .group > img:first-child:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 #trending-collection-section .bottom .group .row {
   display: flex;
   gap: 15px;
   margin: 15px 0;
 }
-#trending-collection-section .bottom .group .row img {
+#trending-collection-section .bottom .group .row img:first-child, #trending-collection-section .bottom .group .row img:nth-child(2) {
   width: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+#trending-collection-section .bottom .group .row img:first-child:hover, #trending-collection-section .bottom .group .row img:nth-child(2):hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 #trending-collection-section .bottom .group .row .rectangle {
   color: #FFFFFF;
@@ -470,6 +560,12 @@ html {
   background-color: #A259FF;
   border-radius: 20px;
   width: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#trending-collection-section .bottom .group .row .rectangle:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 #trending-collection-section .bottom .group p {
   font-size: 22px;
@@ -481,6 +577,7 @@ html {
   display: flex;
   gap: 12px;
   margin-top: 10px;
+  cursor: pointer;
 }
 #trending-collection-section .bottom .group .mrfox img {
   width: 24px;
@@ -599,7 +696,17 @@ html {
   background-color: transparent;
   padding: 19px 50px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
   border: 2px solid #A259FF;
+}
+#top-rated-artists-section .top .right:hover {
+  border-top: 2px solid #cc4499;
+  border-bottom: 2px solid #aa00ff;
+  border-left: 2px solid #663dff;
+  border-right: 2px solid #663dff;
 }
 #top-rated-artists-section .bottom {
   display: flex;
@@ -618,6 +725,13 @@ html {
   gap: 0;
   flex-direction: column;
   gap: 20px;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#top-rated-artists-section .bottom .card:hover {
+  border-color: #A259FF;
+  transform: scale(1.1);
 }
 #top-rated-artists-section .bottom .card > p {
   font-family: "Space Mono", monospace;
@@ -727,7 +841,7 @@ html {
     border-radius: 20px;
     color: #FFFFFF;
     background-color: transparent;
-    padding: 19px 93px;
+    padding: 19px 83px;
     cursor: pointer;
   }
   #top-rated-artists-section .bottom .card:nth-child(6) {
@@ -753,11 +867,35 @@ html {
   flex-wrap: wrap;
   gap: 30px;
 }
+#browse-categories-section .group .card {
+  cursor: pointer;
+  transition: 0.8s;
+}
+#browse-categories-section .group .card:hover {
+  transform: scale(1.1);
+}
+#browse-categories-section .group .card:hover img:last-child {
+  display: none;
+}
+#browse-categories-section .group .card:hover .blur {
+  display: none;
+}
 #browse-categories-section .group .card .top {
   position: relative;
 }
 #browse-categories-section .group .card .top img:first-child {
   width: 240px;
+  height: 240px;
+  border-radius: 20px 20px 0px 0px;
+}
+#browse-categories-section .group .card .top .blur {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(7.5px);
+          backdrop-filter: blur(7.5px);
+  top: 0;
+  width: 240px;
+  height: 240px;
   border-radius: 20px 20px 0px 0px;
 }
 #browse-categories-section .group .card .top img:last-child {
@@ -793,6 +931,10 @@ html {
     width: 150px;
     height: 142px;
   }
+  #browse-categories-section .group .card .top .blur {
+    width: 150px;
+    height: 142px;
+  }
   #browse-categories-section .group .card .top img:last-child {
     width: 80px;
     top: 31px;
@@ -800,13 +942,16 @@ html {
   }
   #browse-categories-section .group .card .bottom {
     width: 150px;
-    height: 67px;
+    height: 89px;
     padding: 20px 20px 25px;
     font-size: 16px;
     font-weight: 600;
     line-height: 22.4px;
     color: #FFFFFF;
     margin-top: -3px;
+  }
+  #browse-categories-section .group .card:nth-child(1) .bottom, #browse-categories-section .group .card:nth-child(2) .bottom, #browse-categories-section .group .card:nth-child(3) .bottom, #browse-categories-section .group .card:nth-child(4) .bottom {
+    height: 67px;
   }
 }
 @media (max-width: 834px) {
@@ -817,6 +962,9 @@ html {
     gap: 20px;
   }
   #browse-categories-section .group .card .top img:first-child {
+    width: 147px;
+  }
+  #browse-categories-section .group .card .top .blur {
     width: 147px;
   }
   #browse-categories-section .group .card .top img:last-child {
@@ -861,9 +1009,22 @@ html {
   cursor: pointer;
   border: 2px solid #A259FF;
 }
+#discover-more-section .top .right:hover {
+  border-top: 2px solid #cc4499;
+  border-bottom: 2px solid #aa00ff;
+  border-left: 2px solid #663dff;
+  border-right: 2px solid #663dff;
+}
 #discover-more-section .bottom {
   display: flex;
   gap: 30px;
+}
+#discover-more-section .bottom .group {
+  cursor: pointer;
+  transition: 0.5s;
+}
+#discover-more-section .bottom .group:hover {
+  transform: scale(1.05);
 }
 #discover-more-section .bottom .group > img {
   -o-object-fit: cover;
@@ -949,7 +1110,7 @@ html {
     text-transform: none;
   }
   #discover-more-section .bottom {
-    gap: 20px;
+    gap: 30px;
   }
   #discover-more-section .bottom .group > img {
     height: 295px;
@@ -975,6 +1136,7 @@ html {
     cursor: pointer;
   }
   #discover-more-section .bottom {
+    gap: 20px;
     flex-direction: column;
   }
   #discover-more-section .bottom .group > img {
@@ -1006,6 +1168,13 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#nft-info-section .gradient {
+  width: 100%;
+  height: 640px;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
+}
 #nft-info-section .content {
   position: absolute;
   bottom: 60px;
@@ -1021,7 +1190,7 @@ html {
   gap: 12px;
   border-radius: 20px;
   color: #FFFFFF;
-  background-color: #2B2B2B;
+  background-color: #3B3B3B;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -1047,15 +1216,22 @@ html {
   border-radius: 20px;
   color: #2B2B2B;
   background-color: #FFFFFF;
-  padding: 22px 50px;
+  padding: 19px 48px;
   cursor: pointer;
+  border: 3px solid transparent;
 }
 #nft-info-section .content button:last-child img {
   height: 20px;
   width: 20px;
 }
+#nft-info-section .content button:last-child:hover {
+  border-color: #2B2B2B;
+}
 @media (max-width: 1280px) {
   #nft-info-section img {
+    height: 630px;
+  }
+  #nft-info-section .gradient {
     height: 630px;
   }
   #nft-info-section .content {
@@ -1073,6 +1249,9 @@ html {
     padding-top: 105px;
   }
   #nft-info-section img {
+    height: 593px;
+  }
+  #nft-info-section .gradient {
     height: 593px;
   }
   #nft-info-section .content {
@@ -1105,6 +1284,7 @@ html {
   font-weight: 600;
   line-height: 45.6px;
   color: #FFFFFF;
+  margin-bottom: 10px;
 }
 #how-it-works-section .top > p {
   font-size: 22px;
@@ -1126,6 +1306,11 @@ html {
   align-items: center;
   gap: 0;
   flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#how-it-works-section .bottom .card:hover img {
+  transform: scale(1.2);
 }
 #how-it-works-section .bottom .card .text h5 {
   font-size: 22px;
@@ -1287,6 +1472,11 @@ html {
   font-weight: 600;
   line-height: 22.4px;
   color: #FFFFFF;
+  transition: 0.5s;
+}
+#subscribe-section .rectangle .right .input-button button:hover {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
 @media (max-width: 1280px) {
   #subscribe-section .rectangle {
@@ -1316,6 +1506,12 @@ html {
     width: 300px;
     height: 46px;
     padding: 16px 20px;
+  }
+  #subscribe-section .rectangle .right .input-button input::-moz-placeholder {
+    text-transform: capitalize;
+  }
+  #subscribe-section .rectangle .right .input-button input::placeholder {
+    text-transform: capitalize;
   }
   #subscribe-section .rectangle .right .input-button button {
     padding: 12px 94.5px;
@@ -1665,5 +1861,149 @@ html {
     font-weight: 400;
     line-height: 13.2px;
     color: #FFFFFF;
+  }
+}
+
+#create-account-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+#create-account-section > img {
+  width: 50%;
+  height: 691px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#create-account-section .right h2 {
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 56.1px;
+  color: #FFFFFF;
+}
+#create-account-section .right p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 35.2px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  width: 460px;
+  margin: 20px 0 40px;
+}
+#create-account-section .right form .input-container {
+  width: 330px;
+  position: relative;
+  margin-bottom: 15px;
+}
+#create-account-section .right form .input-container input {
+  width: 100%;
+  padding: 12px 20px 12px 52px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  outline: none;
+  color: #2B2B2B;
+}
+#create-account-section .right form .input-container input::-moz-placeholder {
+  color: #2B2B2B;
+}
+#create-account-section .right form .input-container input::placeholder {
+  color: #2B2B2B;
+}
+#create-account-section .right form .input-container input:focus, #create-account-section .right form .input-container input:focus:hover {
+  border-color: #A259FF;
+}
+#create-account-section .right form .input-container:hover input {
+  border-color: #A259FF;
+}
+#create-account-section .right form .input-container img {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+#create-account-section .right form button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: #A259FF;
+  padding: 12px 104.5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: #FFFFFF;
+}
+@media (max-width: 1280px) {
+  #create-account-section {
+    gap: 40px;
+  }
+  #create-account-section > img {
+    height: 615px;
+  }
+  #create-account-section .right h2 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 45.6px;
+    color: #FFFFFF;
+  }
+  #create-account-section .right p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+    text-transform: none;
+    width: 325px;
+  }
+  #create-account-section .right form .input-container {
+    width: 325px;
+  }
+  #create-account-section .right form button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #A259FF;
+    padding: 12px 102.5px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 834px) {
+  #create-account-section {
+    gap: 30px;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  #create-account-section > img {
+    height: 615px;
+    width: 100%;
+    height: 232px;
+  }
+  #create-account-section .right p {
+    width: 315px;
+    margin: 20px 0 30px;
+  }
+  #create-account-section .right form .input-container {
+    width: 315px;
+  }
+  #create-account-section .right form button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #A259FF;
+    padding: 12px 97.5px;
+    cursor: pointer;
   }
 }

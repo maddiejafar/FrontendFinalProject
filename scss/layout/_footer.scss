@@ -7,10 +7,24 @@ footer {
         width: 988px;
         margin: auto;
         .group {
+            .logo img{
+                margin-bottom: 25px;
+            }
             p {
                 @include texts(16px, 400, 22.4px);
                 color: #CCCCCC;
                 margin-bottom: 20px;
+            }
+
+            .a-tags {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                a {
+                    @include texts(16px, 400, 22.4px);
+                    color: #CCCCCC;
+                }
             }
 
             h5 {
@@ -42,6 +56,16 @@ footer {
                     right: 0;
                     top: 0;
                     @include texts(16px, 600, 22.4px); 
+                    transition: 0.5s;
+
+                    img {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background-color: #663dff;
+                        background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                    }
                 }
             }
         }
@@ -66,24 +90,18 @@ footer {
         .top {
             width: 690px;
             flex-direction: column;
-            //gap: 30px;
+            gap: 30px;
             .group {
-                //margin-bottom: 30px;
-                a img {
-                    margin-bottom: 20px !important;
+                .logo img{
+                    margin-bottom: 25px;
                 }
                 p {
-                    width: 690px;
+                    width: 690px !important;
                 }
     
                 h5 {
                     margin-bottom: 20px;
-                    //margin-top: ;
                 }
-
-                //.icons {
-                    //margin-bottom: 30px;
-                //}
             }
         }
 
@@ -91,6 +109,48 @@ footer {
             width: 690px;
             div {
                 margin: 49px 0 20px;
+            }
+        }
+    }
+
+    @include for-type(mobile) {
+        .top {
+            width: 315px;
+
+            .group {
+                p {
+                    width: 315px !important;
+                }
+
+                .input-button {
+
+                    input {
+                        width: 315px;
+                        height: 46px;
+                        padding: 12px 20px;
+
+                        &::placeholder {
+                            text-transform: capitalize;
+                        }
+
+                        margin-bottom: 16px;
+                    }
+    
+                    button {
+                        @include buttons($white-color, $call-to-action, 12px 102px);
+                        position:static;
+                        img {
+                            display: initial;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 315px;
+            div {
+                margin: 30px 0 20px;
             }
         }
     }

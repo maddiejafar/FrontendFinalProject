@@ -27,6 +27,7 @@ html {
         }
 
         .right {
+            cursor: pointer;
             > img {
                 object-fit: cover;
                 width: 510px;
@@ -66,9 +67,15 @@ html {
     .bottom {
         margin-top: -170px;
         button {
-            @include texts(16px, 600, 22.4px);
             @include buttons($white-color, $call-to-action, 19px 50px);
+            @include texts(16px, 600, 22.4px);
+            transition: 0.5s;
             margin: 30px 0;
+
+            &:hover {
+                background-color: #663dff;
+                background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+            }
         }
 
         .statistics {
@@ -198,17 +205,32 @@ html {
         display: flex;
         gap: 30px;
         .group {
-            img {
+            >img:first-child {
                 width: 330px;
                 border-radius: 20px;
+                cursor: pointer;
+                border: 2px solid transparent;
+
+                &:hover {
+                    background-color: #663dff;
+                    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                }
             }
                 
             .row {
                 display: flex;
                 gap: 15px;
                 margin: 15px 0;
-                img {
+                img:first-child, img:nth-child(2) {
                     width: 100px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+
+                    &:hover {
+                        background-color: #663dff;
+                        background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                    }
                 }
     
                 .rectangle {
@@ -219,6 +241,13 @@ html {
                     background-color: $call-to-action;
                     border-radius: 20px;
                     width: 100px;
+                    transition: 0.5s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #663dff;
+                        background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                    }
                 }
             }
     
@@ -230,6 +259,7 @@ html {
                 display: flex;
                 gap: 12px;
                 margin-top: 10px;
+                cursor: pointer;
                 img {
                     width: 24px;
                     border-radius: 100px;
@@ -341,7 +371,15 @@ html {
 
         .right {
             @include buttons($white-color, transparent, 19px 50px);
+            @include texts(16px, 600, 22.4px);
             border: 2px solid $call-to-action;
+
+            &:hover {
+                border-top: 2px solid #cc4499;
+                border-bottom: 2px solid #aa00ff;
+                border-left: 2px solid #663dff;
+                border-right: 2px solid #663dff;
+            }
         }
     }
 
@@ -359,6 +397,14 @@ html {
             @include align-center(0);
             flex-direction: column;
             gap: 20px;
+            border: 2px solid transparent;
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $call-to-action;
+                transform: scale(1.1);
+            }
 
             > p {
                 font-family: 'Space Mono', monospace;
@@ -462,7 +508,7 @@ html {
             .right {
                 margin-bottom: -720px;
                 margin-left: -350px;
-                @include buttons($white-color, transparent, 19px 93px);
+                @include buttons($white-color, transparent, 19px 83px);
             }
         }
 
@@ -489,10 +535,32 @@ html {
         flex-wrap: wrap;
         gap: 30px;
         .card {
+            cursor: pointer;
+            transition: 0.8s;
+            &:hover {
+                transform: scale(1.1);
+                img:last-child {
+                    display: none;
+                }
+                .blur {
+                    display: none;
+                }
+            }
             .top {
                 position: relative;
                 img:first-child {
                     width: 240px;
+                    height: 240px;
+                    border-radius: 20px 20px 0px 0px;
+                }
+
+                .blur {
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.10);
+                    backdrop-filter: blur(7.5px);
+                    top: 0;
+                    width: 240px;
+                    height: 240px;
                     border-radius: 20px 20px 0px 0px;
                 }
 
@@ -531,6 +599,11 @@ html {
                         width: 150px;
                         height: 142px;
                     }
+
+                    .blur {
+                        width: 150px;
+                        height: 142px;
+                    }
     
                     img:last-child {
                         width: 80px;
@@ -541,10 +614,16 @@ html {
     
                 .bottom {
                     width: 150px;
-                    height: 67px;
+                    height: 89px;
                     padding: 20px 20px 25px;
                     @include texts(16px, 600, 22.4px);
                     margin-top: -3px;
+                }
+            }
+
+            .card:nth-child(1),.card:nth-child(2), .card:nth-child(3), .card:nth-child(4) {
+                .bottom {
+                    height: 67px;
                 }
             }
         }
@@ -559,7 +638,11 @@ html {
                     img:first-child {
                         width: 147px;
                     }
-    
+
+                    .blur {
+                        width: 147px;
+                    }
+
                     img:last-child {
                         left: 35px;
                     }
@@ -596,6 +679,13 @@ html {
         .right {
             @include buttons($white-color, transparent, 19px 50px);
             border: 2px solid $call-to-action;
+
+            &:hover {
+                border-top: 2px solid #cc4499;
+                border-bottom: 2px solid #aa00ff;
+                border-left: 2px solid #663dff;
+                border-right: 2px solid #663dff;
+            }
         }
     }
 
@@ -603,6 +693,11 @@ html {
         display: flex;
         gap: 30px;
         .group {
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.05);
+            }
             >img {
                 object-fit: cover;
                 width: 330px;
@@ -678,7 +773,7 @@ html {
         }
 
         .bottom {
-            gap: 20px;
+            gap: 30px;
             .group {
                 >img {
                     height: 295px;
@@ -703,6 +798,7 @@ html {
         }
 
         .bottom {
+            gap: 20px;
             flex-direction: column;
             .group {
                 >img {
@@ -740,13 +836,21 @@ html {
         object-fit: cover;
     }
 
+    .gradient {
+        width: 100%;
+        height: 640px;
+        position: absolute;
+        top: 0;
+        background: linear-gradient(180deg, rgba(162, 89, 255, 0.00) 0%, #A259FF 100%);
+    }
+
     .content {
         position: absolute;
         bottom: 60px;
         left: 115px;
         button:first-child {
             @include texts(16px, 400, 22.4px);
-            @include buttons($white-color, $main-background-color, 10px 20px);
+            @include buttons($white-color, $secondary-background-color, 10px 20px);
             img {
                 height: 24px;
                 border-radius: 120px;
@@ -760,16 +864,25 @@ html {
 
         button:last-child {
             @include texts(16px, 600, 22.4px);
-            @include buttons($main-background-color, $white-color, 22px 50px);
+            @include buttons($main-background-color, $white-color, 19px 48px);
+            border: 3px solid transparent;
             img {
                 height: 20px;
                 width: 20px;
+            }
+
+            &:hover {
+                border-color: $main-background-color;
             }
         }
     }
 
     @include for-type(tablet) {
         img {
+            height: 630px;
+        }
+
+        .gradient {
             height: 630px;
         }
 
@@ -784,6 +897,10 @@ html {
     @include for-type(mobile) {
         padding-top: 105px;
         img {
+            height: 593px;
+        }
+
+        .gradient {
             height: 593px;
         }
 
@@ -807,6 +924,7 @@ html {
         margin-bottom: 48px;
         h3 {
             @include texts(38px, 600, 45.6px);
+            margin-bottom: 10px;
         }
 
         >p {
@@ -825,6 +943,14 @@ html {
             padding: 10px 30px 30px;
             @include align-center(0);
             flex-direction: column;
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
             .text {
                 h5 {
                     @include texts(22px, 600, 30.8px);
@@ -961,6 +1087,12 @@ html {
                     right: 0;
                     top: 0;
                     @include texts(16px, 600, 22.4px); 
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: #663dff;
+                        background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+                    }
                 }
             }
         }
@@ -994,6 +1126,10 @@ html {
                         width: 300px;
                         height: 46px;
                         padding: 16px 20px;
+
+                        &::placeholder {
+                            text-transform: capitalize;
+                        }
                     }
     
                     button {
