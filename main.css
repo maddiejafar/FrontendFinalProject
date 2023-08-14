@@ -1263,6 +1263,8 @@ html {
 
 #nft-info-section {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 #nft-info-section img {
   width: 100%;
@@ -1280,7 +1282,6 @@ html {
 #nft-info-section .content {
   position: absolute;
   bottom: 60px;
-  left: 115px;
 }
 #nft-info-section .content button:first-child {
   font-size: 16px;
@@ -1301,12 +1302,63 @@ html {
   height: 24px;
   border-radius: 120px;
 }
-#nft-info-section .content h2 {
+#nft-info-section .content .average {
+  margin: 30px 0 -65px;
+  display: flex;
+  justify-content: space-between;
+}
+#nft-info-section .content .average h2 {
   font-size: 51px;
   font-weight: 600;
   line-height: 56.1px;
   color: #FFFFFF;
-  margin: 30px 0;
+}
+#nft-info-section .content .average .countdown {
+  width: 295px;
+  height: 147px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(59, 59, 59, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#nft-info-section .content .average .countdown p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.2px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  font-family: Space Mono;
+}
+#nft-info-section .content .average .countdown .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+#nft-info-section .content .average .countdown .bottom .timer {
+  display: flex;
+  flex-direction: column;
+  gap: 5;
+}
+#nft-info-section .content .average .countdown .bottom .timer-digit {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45.6px;
+  color: #FFFFFF;
+  font-family: Space Mono;
+}
+#nft-info-section .content .average .countdown .bottom .timer-label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.2px;
+  color: #FFFFFF;
+  font-family: Space Mono;
+}
+#nft-info-section .content .average .countdown .bottom .timer-separator {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 39.2px;
+  color: #FFFFFF;
+  margin: 0 10px;
 }
 #nft-info-section .content button:last-child {
   font-size: 16px;
@@ -1319,7 +1371,7 @@ html {
   border-radius: 20px;
   color: #2B2B2B;
   background-color: #FFFFFF;
-  padding: 19px 48px;
+  padding: 19px 50px;
   cursor: pointer;
   justify-content: center;
   border: 3px solid transparent;
@@ -1338,10 +1390,7 @@ html {
   #nft-info-section .gradient {
     height: 630px;
   }
-  #nft-info-section .content {
-    left: 82px;
-  }
-  #nft-info-section .content h2 {
+  #nft-info-section .content .average h2 {
     font-size: 38px;
     font-weight: 600;
     line-height: 45.6px;
@@ -1350,7 +1399,7 @@ html {
 }
 @media (max-width: 834px) {
   #nft-info-section {
-    padding-top: 105px;
+    margin-top: 105px;
   }
   #nft-info-section img {
     height: 593px;
@@ -1360,9 +1409,13 @@ html {
   }
   #nft-info-section .content {
     bottom: 40px;
-    left: 30px;
   }
-  #nft-info-section .content h2 {
+  #nft-info-section .content .average {
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 0;
+  }
+  #nft-info-section .content .average .countdown {
     width: 315px;
   }
   #nft-info-section .content button:last-child {
@@ -1372,9 +1425,10 @@ html {
     border-radius: 20px;
     color: #2B2B2B;
     background-color: #FFFFFF;
-    padding: 19px 108.5px;
+    padding: 19px 50px;
     cursor: pointer;
     justify-content: center;
+    width: 315px;
   }
 }
 

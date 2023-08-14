@@ -444,12 +444,33 @@
     <div id="nft-info-section">
         <img src="./Images/nft-info2.png" alt="">
         <div class="gradient"></div>
-        <div class="content">
+        <div class="content container">
             <button>
                 <img src="./Images/shroomie.png" alt="">
                 Shroomie
             </button>
-            <h2>Magic Mashrooms</h2>
+            <div class="average">
+                <h2>Magic Mashrooms</h2>
+                <div class="countdown">
+                    <p>Auction ends in:</p>
+                    <div class="bottom">
+                        <div class="timer">
+                            <div id="hours" class="timer-digit">00</div>
+                            <div class="timer-label">Hours</div>
+                          </div>
+                          <div class="timer-separator">:</div>
+                          <div class="timer">
+                            <div id="minutes" class="timer-digit">00</div>
+                            <div class="timer-label">Minutes</div>
+                          </div>
+                          <div class="timer-separator">:</div>
+                          <div class="timer">
+                            <div id="seconds" class="timer-digit">00</div>
+                            <div class="timer-label">Seconds</div>
+                          </div>
+                        </div>
+                    </div>
+            </div>
             <button>
                 <img src="./Images/Icons/Eye.svg" alt="">
                 See NFT
@@ -544,7 +565,9 @@
         </div>
     </footer>
 
+
     <script src="./Js/burger-menu.js"></script>
     <script src="./Js/toast.js"></script>
+    <script src="./Js/countdown.js"></script>
 </body>
 </html>
