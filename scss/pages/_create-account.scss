@@ -100,11 +100,6 @@
         color: $secondary-background-color;
         background-color: $white-color;
       }
-
-      .toast-error {
-        background-color: red;
-        color: white;
-      }
     }
 
     @include for-type(tablet) {

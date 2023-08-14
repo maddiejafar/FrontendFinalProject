@@ -315,3 +315,87 @@
         }
     }
 }
+
+
+#favorites-section {
+    background-color: $secondary-background-color;
+    >div {
+        padding: 80px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+                .group {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                transition: 0.5s;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                >img {
+                    object-fit: cover;
+                    width: 330px;
+                    height: 296px;
+                    border-radius: 20px 20px 0px 0px;
+                }
+    
+                .texts {
+                    width: 330px;
+                    height: 173px;
+                    padding: 20px 30px 25px;
+                    background-color: $main-background-color;
+                    border-radius: 0px 0px 20px 20px;
+                    margin-top: -2px;
+    
+                    h5 {
+                        @include texts (22px, 600, 30.8px);
+                    }
+    
+                    .moon-dancer {
+                        display: flex;
+                        gap: 12px;
+                        margin: 5px 0 25px;
+                        img {
+                            width: 24px;
+                            border-radius: 120px;
+                        }
+                        
+                        h6 {
+                            @include texts (16px, 400, 22.4px);
+                            font-family: Space Mono; 
+                        }
+                    }
+    
+                    .statistics {
+                        font-family: Space Mono;
+                        .price {
+                            margin-bottom: 8px;
+                            @include space-between;
+                            p {
+                                @include texts (12px, 400, 13.2px);
+                                color: #858584;
+                                font-family: Space Mono;
+                            }
+                        }
+    
+                        .eth {
+                            @include space-between;
+                            p {
+                                @include texts (16px, 400, 22.4px); 
+                            }
+                        }
+                    }
+                }
+    
+                .heart-icon {
+                    position: absolute;
+                    top:  20px;
+                    right: 20px;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+    }
+}

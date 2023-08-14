@@ -2082,6 +2082,97 @@ html {
   }
 }
 
+#favorites-section {
+  background-color: #3B3B3B;
+}
+#favorites-section > div {
+  padding: 80px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#favorites-section > div .group {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+#favorites-section > div .group:hover {
+  transform: scale(1.05);
+}
+#favorites-section > div .group > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 330px;
+  height: 296px;
+  border-radius: 20px 20px 0px 0px;
+}
+#favorites-section > div .group .texts {
+  width: 330px;
+  height: 173px;
+  padding: 20px 30px 25px;
+  background-color: #2B2B2B;
+  border-radius: 0px 0px 20px 20px;
+  margin-top: -2px;
+}
+#favorites-section > div .group .texts h5 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30.8px;
+  color: #FFFFFF;
+}
+#favorites-section > div .group .texts .moon-dancer {
+  display: flex;
+  gap: 12px;
+  margin: 5px 0 25px;
+}
+#favorites-section > div .group .texts .moon-dancer img {
+  width: 24px;
+  border-radius: 120px;
+}
+#favorites-section > div .group .texts .moon-dancer h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+  font-family: Space Mono;
+}
+#favorites-section > div .group .texts .statistics {
+  font-family: Space Mono;
+}
+#favorites-section > div .group .texts .statistics .price {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+#favorites-section > div .group .texts .statistics .price p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.2px;
+  color: #FFFFFF;
+  color: #858584;
+  font-family: Space Mono;
+}
+#favorites-section > div .group .texts .statistics .eth {
+  display: flex;
+  justify-content: space-between;
+}
+#favorites-section > div .group .texts .statistics .eth p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #FFFFFF;
+}
+#favorites-section > div .group .heart-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+}
+
 #create-account-section {
   display: flex;
   align-items: center;
@@ -2192,10 +2283,6 @@ html {
 #create-account-section #toast-container .toast-success {
   color: #3B3B3B;
   background-color: #FFFFFF;
-}
-#create-account-section #toast-container .toast-error {
-  background-color: red;
-  color: white;
 }
 @media (max-width: 1280px) {
   #create-account-section {
