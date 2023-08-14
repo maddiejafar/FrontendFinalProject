@@ -2262,28 +2262,6 @@ html {
   background-color: #663dff;
   background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
 }
-#create-account-section #toast-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  transition: 0.5s;
-  z-index: 1;
-}
-#create-account-section #toast-container .toast {
-  width: 310px;
-  height: 100px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 10px;
-  border-bottom: 5px solid #A259FF;
-}
-#create-account-section #toast-container .toast-success {
-  color: #3B3B3B;
-  background-color: #FFFFFF;
-}
 @media (max-width: 1280px) {
   #create-account-section {
     gap: 40px;

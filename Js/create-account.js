@@ -1,65 +1,73 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("form");
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      const usernameInput = document.getElementById("username-input");
-      const emailInput = document.getElementById("email-input");
-      const passwordInput = document.getElementById("password-input");
-      const confirmInput = document.getElementById("confirm-input");
-  
-      const errorMessages = document.querySelectorAll(".error-message");
-      errorMessages.forEach((message) => message.remove());
-  
-      let isValid = true;
-  
-      if (!usernameInput.value.trim()) {
-        isValid = false;
-        showError(usernameInput, "Username is required.");
-      }
-  
-      if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-        isValid = false;
-        showError(emailInput, "Please enter a valid email address.");
-      }
-  
-      if (!passwordInput.value.trim()) {
-        isValid = false;
-        showError(passwordInput, "Password is required.");
-      }
-  
-      if (passwordInput.value !== confirmInput.value) {
-        isValid = false;
-        showError(confirmInput, "Passwords do not match.");
-      }
-  
-      if (isValid) {
-        showSuccessToast();
-      }
-    });
-  
-    function showError(input, message) {
-      const errorMessage = document.createElement("span");
-      errorMessage.className = "error-message";
-      errorMessage.textContent = message;
-      input.parentNode.appendChild(errorMessage);
+const form = document.getElementById('form');
+const username = document.getElementById('username-input');
+const email = document.getElementById('email-input');
+const password = document.getElementById('password-input');
+const password2 = document.getElementById('confirm-input');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+
+    if(usernameValue === '') {
+        setError(username, 'Username is required');
+    } else {
+        setSuccess(username);
     }
-  
-    function isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
     }
-  
-    function showSuccessToast() {
-      const toast = document.createElement("div");
-      toast.className = "toast";
-      toast.textContent = "Successfully registered!";
-      document.body.appendChild(toast);
-  
-      setTimeout(function () {
-        toast.remove();
-      }, 3000);
+
+    if(passwordValue === '') {
+        setError(password, 'Password is required');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
     }
-  });
+
+    if(password2Value === '') {
+        setError(password2, 'Please confirm your password');
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords doesn't match");
+    } else {
+        setSuccess(password2);
+    }
+
+};
   
