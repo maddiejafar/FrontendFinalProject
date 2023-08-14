@@ -207,6 +207,7 @@
         flex-wrap: wrap;
         gap: 30px;
         .group {
+            position: relative;
             cursor: pointer;
             transition: 0.5s;
             &:hover {
@@ -265,6 +266,14 @@
                         }
                     }
                 }
+            }
+
+            .heart-icon {
+                position: absolute;
+                top:  20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
             }
         }
     }

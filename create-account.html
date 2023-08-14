@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <title>Homepage</title>
+    <title>Create account</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body id="create-account-body">
@@ -70,7 +70,8 @@
               <img src="./images/icons/LockKey.svg" alt="" />
               <div class="error"></div>
             </div>
-            <button type="submit">Create account</button>
+            <button id="create-account" type="submit">Create account</button>
+            <div id="toast-container"></div>
           </form>
         </div>
     </div>
@@ -100,7 +101,7 @@
               <p style="width: 330px;">Get exclusive promotions & updates straight to your inbox.</p>
               <div class="input-button">
                   <input type="text" placeholder="Enter your email here">
-                  <button>
+                  <button id="subscribe">
                       <img src="./Images/Icons/EnvelopeSimple.svg" alt="">
                       Subscribe
                   </button>
@@ -113,5 +114,9 @@
       </div>
   </footer>
 
-    <script src="./burger-menu.js"></script>
+
+    
+    <script src="./Js/burger-menu.js"></script>
+    <script src="./Js/create-account.js"></script>
+    <script src="./Js/toast.js"></script>
 </body>

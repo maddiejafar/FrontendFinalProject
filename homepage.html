@@ -18,7 +18,7 @@
             <a href="#">Marketplace</a>
             <a href="#">Rankings</a>
             <a href="#">Connect a wallet</a>
-            <a href="create-account.html" class="sign-up" target="_blank">
+            <a href="./create-account.html" class="sign-up" target="_blank">
                 <img src="./Images/Icons/User.svg" alt="">
                 Sign Up
             </a>
@@ -495,11 +495,12 @@
                 <p>Get exclusive promotions & updates straight to your inbox.</p>
                 <div class="input-button">
                     <input type="text" placeholder="Enter your email here">
-                    <button>
+                    <button id="subscribe">
                         <img src="./Images/Icons/EnvelopeSimple.svg" alt="">
                         Subscribe
                     </button>
                 </div>
+                <div id="toast-container"></div>
             </div>
         </div>
     </div>
@@ -529,10 +530,11 @@
                 <p style="width: 330px;">Get exclusive promotions & updates straight to your inbox.</p>
                 <div class="input-button">
                     <input type="text" placeholder="Enter your email here">
-                    <button>
+                    <button id="subscribe">
                         <img src="./Images/Icons/EnvelopeSimple.svg" alt="">
                         Subscribe
                     </button>
+                    <div class="toast-container"></div>
                 </div>
             </div>
         </div>
@@ -542,6 +544,7 @@
         </div>
     </footer>
 
-    <script src="./burger-menu.js"></script>
+    <script src="./Js/burger-menu.js"></script>
+    <script src="./Js/toast.js"></script>
 </body>
 </html>
