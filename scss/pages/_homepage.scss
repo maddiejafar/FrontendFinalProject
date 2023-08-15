@@ -694,10 +694,8 @@ html {
         .group {
             cursor: pointer;
             transition: 0.5s;
-            border: 3px solid transparent;
-            border-radius: 20px;
             &:hover {
-                border-color: $white-color;
+                transform: scale(1.05);
             }
             >img {
                 object-fit: cover;

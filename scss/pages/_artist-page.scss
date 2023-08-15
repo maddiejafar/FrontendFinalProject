@@ -194,7 +194,15 @@
             cursor: pointer;
             @include texts(22px, 600, 30.8px);
             text-align: center;
-            padding: 14.5px 0;    
+            padding: 14.5px 0; 
+            
+            #favorites-count {
+                @include texts(16px, 400, 22.4px);
+                padding: 5px 10px;
+                border-radius: 20px;
+                background-color: $secondary-background-color;
+                margin-left: 16px;
+            }
         }
     }
 }

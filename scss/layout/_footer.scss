@@ -89,6 +89,7 @@ footer {
     }
 
     @include for-type(tablet) {
+        border-top: none;
         .top {
             width: 690px;
             flex-direction: column;

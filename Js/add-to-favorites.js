@@ -115,7 +115,7 @@ favoritesTab.addEventListener("click", () => {
 function updateFavoritesCount() {
   const favoritesCount = favorites.length;
   const favoritesCountElement = document.getElementById("favorites-count");
-  favoritesCountElement.textContent = `(${favoritesCount})`;
+  favoritesCountElement.textContent = `${favoritesCount}`;
 }
 
 function toggleFavorite(item) {
