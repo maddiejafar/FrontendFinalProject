@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Create account</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main.css">       
 </head>
 <body id="create-account-body">
     <header>
@@ -49,7 +49,7 @@
         <div class="right">
           <h2>Create Account</h2>
           <p>Welcome! enter your details and start creating, collecting and selling NFTs.</p>
-          <form id="form" action="/">
+          <form id="form">
             <div class="input-container">
               <input id="username-input" placeholder="Username" type="text" />
               <img src="./images/Icons/Username.svg" alt="" />
@@ -71,7 +71,7 @@
               <div class="error"></div>
             </div>
             <button id="create-account" type="submit">Create account</button>
-            <div id="toast-container"></div>
+            <div class="ca-toast-container"></div>
           </form>
         </div>
     </div>
@@ -100,11 +100,12 @@
               <h5>Join Our Weekly Digest</h5>
               <p style="width: 330px;">Get exclusive promotions & updates straight to your inbox.</p>
               <div class="input-button">
-                  <input type="text" placeholder="Enter your email here">
-                  <button id="subscribe">
+                  <input class="subscribe-input" type="text" placeholder="Enter your email here">
+                  <button class="subscribe-btn">
                       <img src="./Images/Icons/EnvelopeSimple.svg" alt="">
                       Subscribe
                   </button>
+                  <div class="toast-container"></div>
               </div>
           </div>
       </div>
@@ -118,5 +119,5 @@
     
     <script src="./Js/burger-menu.js"></script>
     <script src="./Js/create-account.js"></script>
-    //
+    <script src="./Js/toast.js"></script>
 </body>

@@ -1,6 +1,25 @@
 #create-account-section {
     @include align-center(60px);
 
+    .ca-toast-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .ca-toast-success {
+        background-color: $white-color;
+        border-bottom: 5px solid #2ecc71;
+        @include texts(20px, 400, 35.2px);
+        color: $main-background-color;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        padding: 10px 15px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
     >img {
         width: 50%;
         height: 691px;

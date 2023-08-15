@@ -126,5 +126,5 @@ function toggleFavorite(item) {
       favorites.splice(index, 1);
   }
   saveFavorites();
-  updateFavoritesCount(); // Update the favorites count immediately
+  updateFavoritesCount();
 }

@@ -694,8 +694,10 @@ html {
         .group {
             cursor: pointer;
             transition: 0.5s;
+            border: 3px solid transparent;
+            border-radius: 20px;
             &:hover {
-                transform: scale(1.05);
+                border-color: $white-color;
             }
             >img {
                 object-fit: cover;
@@ -1091,6 +1093,40 @@ html {
 
 #subscribe-section {
     padding: 40px 0 80px;
+
+    
+    .toast-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .toast-success {
+        background-color: $white-color;
+        border-bottom: 5px solid #2ecc71;
+        @include texts(20px, 400, 35.2px);
+        color: $main-background-color;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        padding: 10px 15px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .toast-error {
+        background-color: $white-color;
+        border-bottom: 5px solid #e74c3c;
+        @include texts(20px, 400, 35.2px);
+        color: $main-background-color;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        padding: 10px 15px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
     .rectangle {
         width: 1050px;
         height: 430px;

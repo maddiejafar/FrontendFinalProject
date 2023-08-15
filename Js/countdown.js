@@ -1,5 +1,5 @@
 function updateCountdown() {
-    const targetTime = new Date().getTime() + 60 * 60 * 60 * 1000; // Current time + 60 hours
+    const targetTime = new Date().getTime() + 60 * 60 * 60 * 1000;
   
     setInterval(() => {
       const currentTime = new Date().getTime();
